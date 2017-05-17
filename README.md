@@ -1,2 +1,1 @@
-# SCTIZ: Sistema de Controle de Talentos Ifro Zona Norte
-
+# SISCOT: Sistema de Controle de Talentos
