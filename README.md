@@ -1,1 +1,1 @@
-# SISCOT: Sistema de Controle de Talentos
+# Banco Integrado de Talentos
