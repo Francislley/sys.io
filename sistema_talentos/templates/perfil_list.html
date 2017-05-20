@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Listagem de Perfis
+{% endblock title %}
+
+{% block tituloPagina %}
+Listagem de Perfis
+{% endblock tituloPagina %}
+
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for perfil in lista %}
+    <tr>
+      <td>{{ perfil.nome }}</td>
+      <td>{{ perfil.cpf }}</td>
+      <td>{{ perfil.email }}</td>
+      <td>
+        <a href="{% url 'perfil_edit' pk=perfil.pk %}">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+        <a href="{% url 'perfil_remove' pk=perfil.pk %}">
+          <span class="glyphicon glyphicon-trash"></span>
+        </a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<a href="{% url 'perfil_new' %}">
+<button type="submit" class="btn btn-primary">
+    Cadastrar
+</button>
+</a>
+
+{% endblock content %}
+
+
